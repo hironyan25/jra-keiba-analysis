@@ -1,0 +1,17 @@
+# データベース接続設定
+default: &default
+  host: 127.0.0.1
+  port: 5432
+  database: pckeiba
+  user: postgres
+  password: postgres
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: pckeiba_test
+
+production:
+  <<: *default
